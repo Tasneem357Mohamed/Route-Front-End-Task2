@@ -1,0 +1,991 @@
+body
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face
+{
+    font-family: "arima";
+    font-weight: 400;
+    src: url("../fonts/Arima-Light.ttf");
+}
+@font-face
+{
+    font-family: "arima";
+    font-weight: 600;
+    src: url("../fonts/Arima-Regular.ttf");
+}
+@font-face
+{
+    font-family: "arima";
+    font-weight: 900;
+    src: url("../fonts/Arima-Bold.ttf");
+}
+h1::selection,h3::selection,h2::selection,p::selection,span::selection
+{
+    background-color: #00B8DC;
+    color: white;
+}
+/* Start NavBar */
+div.nav-bar
+{
+    background-color: #F8FDFE;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #C0EEF7;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 11;
+}
+div.logo
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+img.logo-image
+{
+    width: 30px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background-color: #00B8DC;
+}
+span.logo-text
+{
+    font-size: 24px;
+    font-family: "arima";
+    font-weight: 900;
+    color: #26616D;
+}
+span.logo-text-highlight
+{
+    color: #00B8DC;
+}
+span.logo-text::selection , a.link::selection
+{
+    background-color: #00B8DC;
+    color: white;
+}
+a.link
+{
+    margin-left: 25px;
+    font-size: 19px;
+    color:#183B42;
+    text-decoration: none;
+    padding: 2px;
+    position: relative;
+    font-family: "arima";
+    font-weight: 600;
+}
+a.selected-link::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.75s ease;
+}
+a.selected-link:hover
+{
+    color: #00B8DC;
+}
+a.selected-link:hover::after
+{
+    width: 100%;
+    border-bottom: 2px solid #00B8DC;
+}
+a.home-link
+{
+    color: #00B8DC;
+    border-bottom: 2px solid #00B8DC;
+}
+/* End NavBar */
+
+div.hero-section , div.key-features-section , div.reviews-section , div.related-products-section
+{
+    margin-top: 170px;
+    padding: 20px 30px;
+}
+
+/* Start Hero Section */
+div.hero-section
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+div.hero-image-grandparent
+{
+    border:2px solid #E1E3E7;
+    border-radius: 15px;
+    padding: 20px 20px;
+    width: 45%;
+}
+div.hero-image-parent
+{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+img.hero-image
+{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+span.hero-image-text
+{
+    background-color: #00B8DC;
+    padding: 3px 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 30px ;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-family: "arima";
+    font-weight: 900;
+}
+div.hero-content
+{
+    width: 45%;
+}
+span.plan
+{
+    margin-right: 20px;
+    font-size: 19px;
+    background-color: #80DCEE;
+    padding: 2px 15px;
+    color:#183B42;
+    border-radius: 30px;
+    font-family: "arima";
+    font-weight: 900;
+}
+h1.hero-header
+{
+    color:#183B42;
+    font-size: 50px;
+    font-family: "arima";
+    font-weight: 900;
+}
+span.hero-header-highlighted , span.key-features-header-highlighted , 
+span.reviews-header-highlighted , span.related-products-header-highlighted
+{
+    color: #00B8DC;
+}
+p.hero-description
+{
+    font-size: 20px;
+    color:#183B42;
+    font-family: "arima";
+    font-weight: 600;
+}
+span.price
+{
+    margin-right: 20px;
+    color:#183B42;
+}
+span.price-big
+{
+    font-size: 36px;
+    font-family: "arima";
+    font-weight: 900;
+}
+span.price-medium
+{
+    font-size: 25px;
+    text-decoration: line-through;
+    font-family: "arima";
+    font-weight: 600;
+}
+span.price-marked
+{
+    background-color: #FFE2E2;
+    color: #EA1824;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-weight: 900;
+    font-family: "arima";
+}
+p.prices-description
+{
+    font-size: 22px;
+}
+div.hero-buttons
+{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+button.hero-btn
+{
+    font-size: 22px;
+    border-radius:100px ;
+    padding: 15px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: transform 0.3s ease;
+    font-family: "arima";
+    font-weight: 900;
+}
+button.hero-btn img
+{
+    margin-right: 10px;
+    width: 25px;
+}
+button.hero-btn:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+button.hero-prime-button
+{
+    background-color: #00B8DC;
+    color: white;
+}
+button.hero-secondary-button
+{
+    background-color: transparent;
+    border: 2px solid #E1E3E7 ;
+}
+/* End Hero Section */
+
+
+
+/* Start key Features Section */
+div.key-features-section , div.related-products-section
+{
+    background-color: #E0F7FB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2.key-features-header , h2.reviews-header , h2.related-products-header
+{
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-family: "arima";
+    font-weight: 900;
+}
+p.key-features-description , p.reviews-description , p.related-products-description
+{
+    font-size: 21px;
+    color: #333333;
+    font-family: "arima";
+    font-weight: 600;
+}
+div.key-features-container
+{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+div.key-feature
+{
+    width: 25%;
+    border-radius: 25px;
+    border: 1px solid #00B8DC;
+    background-color: white;
+    padding: 20px 20px;
+    flex-grow: 1;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+div.key-feature:hover
+{
+    box-shadow: 0px 0px 10px 0px #017b93;
+    transform: translateY(-7px);
+}
+div.key-feature-icon
+{
+    width: 45px;
+    height: 45px;
+    padding: 5px 5px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.first-key-feature-icon
+{
+    background-color: #eee5ff;
+}
+div.second-key-feature-icon
+{
+    background-color: #D9FAFF;
+}
+div.third-key-feature-icon
+{
+    background-color: #D8F9E9;
+}
+div.fourth-key-feature-icon
+{
+    background-color: #FFEBD5 ;
+}
+div.fifth-key-feature-icon
+{
+    background-color: #DDEFFF;
+}
+div.sixth-key-feature-icon
+{
+    background-color: #FFE0E8;
+}
+img.key-feature-icon-image
+{
+    width: 40px;
+}
+span.key-feature-name
+{
+    font-size: 16px;
+    font-family: "arima";
+    font-weight: 900;
+}
+span.first-key-feature
+{
+    color: #803BFF;
+}
+span.second-key-feature
+{
+    color: #0099B8;
+}
+span.third-key-feature
+{
+    color: #029F69;
+}
+span.fourth-key-feature
+{
+    color: #E64B01;
+}
+span.fifth-key-feature
+{
+    color: #007AC8;
+}
+span.sixth-key-feature
+{
+    color: #E00049;
+}
+h3.key-feature-header
+{
+    color: #183B42;
+    font-size: 24px;
+    font-family: "arima";
+    font-weight: 900;
+}
+p.key-feature-description
+{
+    font-size: 18px;
+    color: #183B42;
+    font-family: "arima";
+    font-weight: 600;
+}
+h3.key-feature-counter
+{
+    color: #26616D;
+    font-size: 25px;
+    font-family: "arima";
+    font-weight: 900;
+}
+span.key-feature-counter-description
+{
+    color: #75767a;
+    font-size: 16px;
+    font-family: "arima";
+    font-weight: 600;
+}
+div.key-features-footer
+{
+    margin: 50px auto 100px auto;
+    padding: 20px 30px;
+    background-color: #00B8DC;
+    border-radius: 15px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span.key-feature-footer-text , p.key-feature-footer-description
+{
+    color: #E0F7FB;
+    font-size: 17px;
+    font-family: "arima";
+    font-weight: 600;
+}
+h3.key-feature-footer-header
+{
+    margin-block: 15px;
+    color: white;
+    font-size: 35px;
+    font-family: "arima";
+    font-weight: 900;
+}
+button.key-feature-button
+{
+    color: #00B8DC;
+    font-size: 21px;
+    border-radius: 150px;
+    padding: 3px 50px;
+    height: 45px;
+    border: none;
+    transition: transform 0.75s ease;
+    font-family: "arima";
+    font-weight: 900;
+}
+button.key-feature-button:hover
+{
+    cursor: pointer;
+    background-color: #111828;
+    color: white;
+    transform: scale(1.05);
+}
+/* End key Features Section */
+
+
+/* Start Reviews Section */
+div.reviews-section
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.review-content
+{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    position: relative;
+    align-items: flex-start;
+}
+div.final-evaluations
+{
+    position: sticky;
+    top: 42px;
+    width: 35%;
+    height: fit-content;
+    padding: 20px 30px;
+    border: 2px solid #E1E3E7;
+    border-radius: 25px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3.evaluation-number
+{
+    z-index: 1;
+    color: #183B42;
+    font-size: 60px;
+    margin-block: 10px;
+    font-family: "arima";
+    font-weight: 900;
+}
+div.stars-container
+{
+    display: flex;
+    justify-content: center;
+}
+img.star
+{
+    width: 40px;
+    margin-right: 10px;
+}
+p.evaluation-description
+{
+    font-size: 20px;
+    color: #183B42;
+    font-family: "arima";
+    font-weight: 600;
+}
+div.percentage-container
+{
+    width: 100%;
+    margin-top: 30px;
+}
+div.percentage
+{
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+div.star-parent
+{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+img.star-percentage
+{
+    width: 25px;
+}
+div.progress-bar-parent
+{
+    width: 90%;
+    height: 15px;
+    border-radius: 150px;
+    background-color: #E1E3E7;
+    position: relative;
+}
+div.progress-bar-child
+{
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 150px;
+    background-color: #00B8DC;
+}
+div.first-progress-bar-child
+{
+    width: 78%;
+}
+div.second-progress-bar-child
+{
+    width: 15%;
+}
+div.third-progress-bar-child
+{
+    width: 5%;
+}
+div.fourth-progress-bar-child
+{
+    width: 1.5%;
+}
+div.fifth-progress-bar-child
+{
+    width: 0.5%;
+}
+hr.evaluation-line
+{
+    width: 100%;
+    margin-block: 15px;
+}
+div.final-calculations
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+h3.calculation-number
+{
+    font-family: "arima";
+    font-weight: 900;
+    font-size: 30px;
+    margin-block: 10px;
+    color: #183B42;
+}
+p.calculation-description
+{
+    font-family: "arima";
+    font-weight: 600;
+    font-size: 20px;
+    color: #183B42;
+}
+div.some-comments
+{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+div.comment
+{
+    border: 2px solid #E1E3E7;
+    border-radius: 15px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+div.comment-header
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.comment-header-left
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+img.reviewer-image
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #00B8DC;
+}
+div.reviewer-details
+{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+h3.reviewer-name
+{
+    font-family: "arima";
+    font-weight: 900;
+    font-size: 23px;
+    margin-block: 0px;
+    color: #183B42;
+}
+span.reviewer-job
+{
+    font-family: "arima";
+    font-weight: 600;
+    font-size: 18px;
+    color: #183B42;
+}
+div.review-stars-container
+{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+img.review-star
+{
+    width: 17px;
+}
+span.review-star-counter
+{
+    font-size: 18px;
+    color: #183B42;
+    font-family: "arima";
+    font-weight: 600;
+}
+div.comment-header-right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+span.verified-purchase
+{
+    background-color: #E0F7FB;
+    color: #11262b;
+    padding: 7px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: "arima";
+    font-weight: 900;
+}
+span.purchase-time
+{
+    font-family: "arima";
+    font-weight: 600;
+    color: #183B42;
+    font-size: 17px;
+}
+p.comment-details
+{
+    font-size: 23px;
+    color: #183B42;
+    font-family: "arima";
+    font-weight: 600;
+}
+button.comment-button
+{
+    width: fit-content;
+    padding: 12px 50px;
+    margin: 0 auto;
+    border: none;
+    background-color: #00B8DC;
+    border-radius: 150px;
+    font-size: 19px;
+    transition: all 0.5s ease;
+    font-family: "arima";
+    font-weight: 900;
+}
+button.comment-button:hover
+{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #00B8DC;
+    color: #00B8DC;
+}
+/* End Reviews Section */
+
+/* Start Related Products Section */
+div.related-products-container
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+div.related-product
+{
+    width: 25%;
+    padding: 20px 30px;
+    border: 2px solid #E1E3E7;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+div.related-product:hover
+{
+    box-shadow: 0px 0px 10px 0px #0b93ae;
+    border: 2px solid #0ccaf0;
+    transform: translateY(-7px);
+}
+div.related-product-image-parent
+{
+    position: relative;
+    width: 100%;
+}
+img.related-product-image
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 25px;
+}
+span.related-product-image-text
+{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background-color: #D9FAFF;
+    padding: 7px 30px;
+    color: #11262b;
+    border-radius: 150px;
+    font-family: "arima";
+    font-weight: 900;
+}
+h3.related-product-name , p.related-product-description
+{
+    align-self: flex-start;
+    color: #183B42;
+    font-family: "arima";
+    font-weight: 900;
+}
+h3.related-product-name 
+{
+    font-size: 21px;
+    margin-bottom: 0px;
+    font-family: "arima";
+    font-weight: 900;
+}
+p.related-product-description
+{
+    font-family: "arima";
+    font-weight: 600;
+    font-size: 18px;
+}
+div.related-product-footer
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button.add-related-product-to-cart
+{
+    border: none;
+    background-color: #00B8DC;
+    color: white;
+    height: 35px;
+    padding: 3px 20px;
+    border-radius: 150px;
+    font-size: 16px;
+    font-family: "arima";
+    font-weight: 900;
+}
+button.related-products-section-button
+{
+    margin-block: 70px;
+    border: 2px solid #00B8DC;
+    background-color: transparent;
+    color: #00B8DC;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 150px;
+    transition: all 0.5s ease;
+    font-family: "arima";
+    font-weight: 900;
+}
+button.related-products-section-button:hover
+{
+    cursor: pointer;
+    background-color: #00B8DC;
+    color: white;
+}
+/* End Related Products Section */
+
+
+
+
+/* Start Footer */
+div.footer
+{
+    padding: 20px 30px;
+    background-color: #111828;
+}
+div.footer-top
+{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+div.summary
+{
+    width: 25%;
+}
+div.website-logo
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+div.website-logo-image-parent
+{
+    width: 50px;
+    background-color: #00B8DC;
+    padding: 1px 5px;
+    border-radius: 15px;
+}
+img.website-logo-image
+{
+    width: 100%;
+}
+h3.website-logo-text
+{
+    color: white;
+    font-size: 25px;
+    font-family: "arima";
+    font-weight: 900;
+}
+p.website-description
+{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: "arima";
+    font-weight: 600;
+}
+div.website-links
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+div.link
+{
+    width: 25px;
+    padding: 3px 5px;
+    background-color: #2d364a;
+    border-radius: 7px;
+}
+div.link1:hover
+{
+    background-color: #4263aa;
+}
+div.link2:hover
+{
+    background-color: #59c7f6;
+}
+div.link3:hover
+{
+    background-color: #ed92bd;
+}
+div.link4:hover
+{
+    background-color: #f1232e;
+}
+img.link-image
+{
+    width: 100%;
+}
+h3.summary-header
+{
+    color: white;
+    font-size: 23px;
+    font-family: "arima";
+    font-weight: 900;
+}
+div.summary-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div.summary-list a
+{
+    color: #b1bdbe;
+    font-size: 18px;
+    font-family: "arima";
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+div.summary-list a:hover
+{
+    color: white;
+    transform: scale(1.05);
+}
+hr.footer-line
+{
+    margin-block: 50px;
+    border: 1px solid #2d364a;
+}
+div.footer-bottom
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+span.footer-bottom-text
+{
+    color: white;
+    font-size: 16px;
+    font-family: "arima";
+    font-weight: 600;
+}
+div.payments-container
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+div.payment-image-parent
+{
+    background-color: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px 30px;
+    transition: transform 0.3s ease;
+}
+img.payment-image
+{
+    width: 50px;
+}
+div.payment-image-parent:hover
+{
+    transform: translateY(-5px);
+}
+/* End Footer */
